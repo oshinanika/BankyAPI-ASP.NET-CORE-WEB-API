@@ -1,0 +1,46 @@
+For BankyAPI project
+
+Model - Bank.cs
+DTO - BankDTO.cs
+
+Repository- (Interface) IBankRepository, (Class) BankRepository
+
+Controllers - BankController.cs
+
+------------------------------------------------------------------
+BankRepository uses Bank.cs Model for accessing DB
+BankRepository <=> DB Model Bank.cs
+
+BankController uses the IBankRepository methods to do CRUD.
+BankController <- IBankRepository.methods
+
+BankController get DB model objects from IRepository then maps the data to the DTO.
+BankController <=> DTO Objects
+
+DTO is used to give/receive data from POSTMAN.
+BankDTO<=>Postman
+
+[HTTPGET]
+(BankController)GET ACCOUNT:
+BankController <- IBankRepository.GetAccount()
+BankController ->Maps to DTO Object
+BankDTO -> (PostMan Output)
+
+[HTTPPOST]
+(BankController)CREATE ACCOUNT:
+BankController <- PostMan Input(BankDTO)
+BankController -> Maps DTO Object to DB MOdel Object
+DB MOdel Object ->IBankRepository.CreateAccount()
+
+[HTTPPatch]
+(BankController)UPDATE ACCOUNT:
+BankController <- PostMan Input(BankDTO)
+BankController -> Maps DTO Object to DB MOdel Object
+DB MOdel Object ->IBankRepository.UpdateAccount()
+
+[HTTPDELETE] by ID
+(BankController)UPDATE ACCOUNT:
+BankController <- PostMan Input(ID)
+BankController -> Get Account Info by ID
+DB MOdel Object ->IBankRepository.DeleteAccount(ID)
+--------------------------------------------------------------

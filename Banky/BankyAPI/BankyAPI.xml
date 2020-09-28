@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankyAPI</name>
+    </assembly>
+    <members>
+        <member name="M:BankyAPI.Controllers.BankController.GetAccounts">
+            <summary>
+            Get List of Accounts
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:BankyAPI.Controllers.BankController.GetAccount(System.Int32)">
+            <summary>
+            Get Individual Account
+            </summary>
+            <param name="Id">Get Id of the Account</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
