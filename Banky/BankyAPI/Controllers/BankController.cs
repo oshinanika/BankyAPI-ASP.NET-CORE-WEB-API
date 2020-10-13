@@ -14,7 +14,7 @@ namespace BankyAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [ProducesResponseType(StatusCodes.Status400BadRequest)] //We can see these StatusCodes in SwaggerUI
-    public class BankController : ControllerBase
+    public class BankController : ControllerBase //API will always have ControllerBase
     {
     
         private IBankRepository _IbankRepo; //private variable name will start with _ .
