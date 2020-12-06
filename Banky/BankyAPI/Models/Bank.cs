@@ -17,6 +17,8 @@ namespace BankyAPI.Models
         [Required]
         public string AccountNumber { get; set; }
         public double AccountBalance { get; set; }
+
+        public byte[] IdentificationImage { get; set; }
         public DateTime AccountCreated { get; set; }
          
     }
