@@ -4,11 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BankyAPI.Models.DTOs
+namespace BankyWeb.Models
 {
-    public class BankDTO
+    public class Bank
     {
-        [Key]
+        //This model was crated based on BankyAPI's BankDTO.cs Model
+
+        //Don't need [key] as this will be bindedto the BankyCOREAPI DB
         public int Id { get; set; }
 
         [Required]
@@ -20,6 +22,5 @@ namespace BankyAPI.Models.DTOs
         public byte[] IdentificationImage { get; set; }
 
         public DateTime AccountCreated { get; set; }
-         
     }
 }
